@@ -15,7 +15,7 @@ ApiController = function (app) {
     // html kodunu jade e çevirir
     app.post('/api/convert/?', function(req, res, next) {
         var html = req.body.html;
-        html2jade.convertHtml(html, {}, function (err, jade) {
+        html2jade.convertHtml(html, {}, function (err, jade, next) {
             res.json({ jade: jade });
         });
     });

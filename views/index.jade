@@ -2,8 +2,14 @@ extends layout
 
 block content
 	div.container
-		h2 Enter your HTML code and press Convert
+		img(src="assets/img/html2jadelogo.jpg")
+	div(ng-controller="apiCtrl").container
 		form(class="form-horizontal")
-			label(for='html') Html:
-			textarea(ng-model='form.text', cols='50', rows='15' name='html')
-			button(ng-click='submitPost()') Submit Post
+			fieldset
+				legend Html-Jade Çevirici | NodeJS Türkiye
+				textarea(name="htmlText", rows="20", class="field span5", ng-change="getJadeOfHtml()", ng-model="htmlText")
+				span &nbsp;
+				button(class="btn btn-large")
+					i(class="icon-arrow-right")
+				span &nbsp;
+				textarea(name="jadeText", rows="20", class="field span5", ng-model="jadeText")
