@@ -1,9 +1,0 @@
-{
-    "db": {
-        "USER": "test",
-        "PASS": "test",
-        "HOST": "localhost",
-        "PORT": "",
-        "DATABASE": "blog"
-    }
-}

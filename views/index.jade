@@ -1,18 +1,9 @@
 extends layout
 
 block content
-	.row-fluid
-		ul
-			li
-		ul
-			li
-		ul.thumbnails
-			li.span4
-				.thumbnail
-					img(src="/images/express-logo.png")
-			li.span4
-				.thumbnail
-					img(src="/images/jade-logo.png")
-			li.span4
-				.thumbnail
-					img(src="/images/bootstrap.png")
+	div.container
+		h2 Enter your HTML code and press Convert
+		form(class="form-horizontal")
+			label(for='html') Html:
+			textarea(ng-model='form.text', cols='50', rows='15' name='html')
+			button(ng-click='submitPost()') Submit Post
